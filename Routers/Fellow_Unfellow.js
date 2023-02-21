@@ -51,7 +51,7 @@ router.delete('/unfollow/:id', fetchuser, async (req, res) => {
         if (unfollow.user.toString() !== req.user.id) {
             return res.status(401).send('Not allowed');
         }
-        unfollow = await Fellow_Unfellow.findByIdAndDelete(req.params.id)
+        unfollow = await Follow_Unfollow.findByIdAndDelete(req.params.id)
         res.json({ "Success": "UnFollowed Successfully", unfollow: unfollow });
     }
     catch (error) {
