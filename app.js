@@ -12,6 +12,7 @@ app.use(express.json());
 app.use(express.json())
 app.use('/api', require('./Routers/Res_Log'));
 app.use('/api', require('./Routers/Fellow_Unfellow'));
+app.use('/api', require('./Routers/Post'));
 
 
 app.listen(port, () => {
